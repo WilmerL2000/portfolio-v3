@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import { getProjects } from '../actions/getProjects';
+
+const projectsInfo = await getProjects()
+
+console.log(projectsInfo)
+
+
+---
+
+<Layout title="Welcome to Astro." description="">
+	<main>
+		{
+			projectsInfo.map(project =>(
+				<a href={`/project/${project.slug}`}>
+					<picture >
+						<img src={project.projectImage} alt={project.title} class="aspect-video w-80 h-60" transition:name={`project ${project._id}`}/>
+					</picture>
+				</a>
+			))
+		}
+	</main>
+</Layout>
+
+<style>
+	
+</style>

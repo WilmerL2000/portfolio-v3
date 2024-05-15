@@ -1,0 +1,27 @@
+---
+import { getProject } from '../../actions/getProject';
+import { getProjects } from '../../actions/getProjects';
+import Layout from '../../layouts/Layout.astro';
+import SectionContainer from '../../components/SectionContainer.astro';
+
+const {slug} = Astro.params
+
+const project = await getProject(slug)
+
+export async function getStaticPaths(){
+
+    const projects = await getProjects()
+
+    return projects.map(project => ({
+        params:{ slug: project.slug}
+    }))
+}
+---
+<Layout title={project.title} description={project.summary}>
+    <SectionContainer>
+
+        <picture class="size-80 mx-auto container">
+            <img src={project.projectImage} alt={project.title} class="aspect-video w-80 h-60" transition:name={`project ${project._id}`}/>
+        </picture>
+    </SectionContainer>
+</Layout>
