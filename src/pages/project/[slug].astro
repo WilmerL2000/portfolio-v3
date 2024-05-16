@@ -18,10 +18,12 @@ export async function getStaticPaths(){
 }
 ---
 <Layout title={project.title} description={project.summary}>
-    <SectionContainer>
-
-        <picture class="size-80 mx-auto container">
-            <img src={project.projectImage} alt={project.title} class="aspect-video w-80 h-60" transition:name={`project ${project._id}`}/>
-        </picture>
+    <SectionContainer class="pt-8">
+        <header>
+            <picture class="size-80 mx-auto container">
+                <h1 class="text-3xl font-bold" transition:name={`project ${project._id} title`}>{project.title}</h1>
+                <img src={project.projectImage} alt={project.title} class="aspect-video" transition:name={`project ${project._id} image`} loading="lazy"/>
+            </picture>
+        </header>
     </SectionContainer>
 </Layout>

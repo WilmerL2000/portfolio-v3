@@ -12,44 +12,36 @@ import CodeIcon from "../components/icons/Code.astro"
 ---
 
 <Layout title="Wilmer Lopez portfolio - Software Developer" description="">
-    <div
-      class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-gray-50 dark:bg-gray-950
-      bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9))]
-      dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
-    >
-    </div>
 	<Header/>
 	<main class="px-4">
 		<SectionContainer class="py-16 md:py-36">
 			<slot/>
 		</SectionContainer>
     <div class="space-y-24">
-      <SectionContainer id="experiencia">
-        <h2
-          class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
-        >
-          <Briefcase class="size-8" />
-          Experiencia laboral
-        </h2>
-        <Experience />
-      </SectionContainer>
-  
-      <SectionContainer id="proyectos">
+      <SectionContainer id="projects">
         <h2
           class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
         >
           <CodeIcon class="size-7" />
-          Proyectos
+          Projects
         </h2>
         <Projects />
       </SectionContainer>
-  
-      <SectionContainer id="sobre-mi">
+      <SectionContainer id="experience">
+        <h2
+          class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+        >
+          <Briefcase class="size-8" />
+          Experience
+        </h2>
+        <Experience />
+      </SectionContainer>
+      <SectionContainer id="about-me">
         <h2
           class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
         >
           <ProfileCheck class="size-8" />
-          Sobre mí
+          About me
         </h2>
         <AboutMe />
       </SectionContainer>
