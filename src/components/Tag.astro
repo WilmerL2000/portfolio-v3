@@ -1,0 +1,24 @@
+---
+
+interface Props{
+    technologies: Technology[]
+}
+
+const {technologies} = Astro.props
+---
+
+    <div class="flex mt-2">
+        <ul class="flex flex-wrap mb-2 gap-x-2 gap-y-2">
+            {
+                technologies.map(technology => (
+                    <li>                    
+                        <span class="flex text-gray-100 dark:bg-blue-900 gap-x-2 font-medium me-2 px-2.5 py-0.5 rounded-full w-auto items-center">
+                            <img title={`${technology.title}`} src={technology.url } class="size-5" loading="lazy"/>
+                            {technology.title}
+                        </span>
+                    </li>
+                ))
+            }
+        </ul>
+    </div>
+

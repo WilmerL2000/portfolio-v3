@@ -3,6 +3,9 @@ import { getProject } from '../../actions/getProject';
 import { getProjects } from '../../actions/getProjects';
 import Layout from '../../layouts/Layout.astro';
 import SectionContainer from '../../components/SectionContainer.astro';
+import Tag from '../../components/Tag.astro';
+
+import { fade } from 'astro:transitions';
 
 const {slug} = Astro.params
 
@@ -18,12 +21,17 @@ export async function getStaticPaths(){
 }
 ---
 <Layout title={project.title} description={project.summary}>
-    <SectionContainer class="pt-8">
+    <SectionContainer class="pt-10 space-y-5">
         <header>
+            <h3 class="text-5xl font-bold block mb-6" transition:name={`project ${project._id} title`}>{project.title}</h3>
             <picture class="size-80 mx-auto container">
-                <h1 class="text-3xl font-bold" transition:name={`project ${project._id} title`}>{project.title}</h1>
-                <img src={project.projectImage} alt={project.title} class="aspect-video" transition:name={`project ${project._id} image`} loading="lazy"/>
+                <img src={project.projectImage} alt={project.title} class="aspect-video rounded-xl" transition:name={`project ${project._id} image`} loading="lazy" />
             </picture>
         </header>
+        <div transition:animate={fade({ duration: '0.4s' })}>
+            <p class="mt-2 text-gray-700 dark:text-gray-400 text-lg">{project.summary}</p>
+            <Tag technologies={project.technologies}/>
+        </div>
+        
     </SectionContainer>
 </Layout>
