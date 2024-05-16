@@ -13,6 +13,7 @@
     "@astrojs/check": "^0.7.0",
     "@astrojs/react": "^3.3.4",
     "@astrojs/tailwind": "^5.1.0",
+    "@fontsource-variable/onest": "^5.0.4",
     "@sanity/astro": "^3.0.0",
     "@sanity/client": "^6.18.2",
     "@types/react": "^18.3.2",
