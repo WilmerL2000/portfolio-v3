@@ -18,7 +18,8 @@ const projects = await getProjects();
                         bg-zinc-500/30">
                             <img alt={project.title}                                 
                                 class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"  
-                                src={project.projectImage} />
+                                src={project.projectImage} 
+                                />
                             <h1 class="text-2xl font-bold" transition:name={`project ${project._id} title`}>{project.title}</h1>                               
                         </div>
                     </div>

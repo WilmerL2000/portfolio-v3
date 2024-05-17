@@ -7,7 +7,11 @@ import sanity from '@sanity/astro';
 // https://astro.build/config
 export default defineConfig({
   integrations: [
-    tailwind(),
+    tailwind(
+      tailwind({
+        applyBaseStyles: false,
+      })
+    ),
     react(),
     sanity({
       projectId: '3erdduzz',
