@@ -7,14 +7,16 @@ import Projects from '../components/Projects.astro';
 import AboutMe from '../components/AboutMe.astro';
 import H2 from '../components/H2.astro';
 import Hero from '../components/Hero.astro';
+import Education from '@/components/Education.astro';
 
 import Briefcase from '../components/icons/Briefcase.astro';
 import ProfileCheck from '../components/icons/ProfileCheck.astro';
 import CodeIcon from "../components/icons/Code.astro"
 import Book from '@/components/icons/Book.astro';
+import Courses from '@/components/Courses.astro';
 ---
 
-<Layout title="Wilmer Lopez portfolio - Software Developer" description="">
+<Layout title="Wilmer Lopez portfolio - Software Developer" description="Here you can find information about me, such as my experience, courses and personal projects.">
 	<Header/>
 	<main class="px-4">
 		<SectionContainer class="py-16 md:py-36">
@@ -22,13 +24,6 @@ import Book from '@/components/icons/Book.astro';
       <Hero/>
 		</SectionContainer>
     <div class="space-y-24">
-      <SectionContainer id="projects">
-        <H2 class="gap-x-3">
-          <CodeIcon class="size-7" />
-          Projects
-        </H2>
-        <Projects />
-      </SectionContainer>
       <SectionContainer id="experience">
         <H2 class="gap-x-3"
         >
@@ -43,6 +38,22 @@ import Book from '@/components/icons/Book.astro';
           <Book class="size-8" />
           Education
         </H2>
+        <Education/>
+      </SectionContainer>
+      <SectionContainer id="experience">
+        <H2 class="gap-x-3"
+        >
+          <Book class="size-8" />
+          Featured courses
+        </H2>
+        <Courses/>
+      </SectionContainer>
+      <SectionContainer id="projects">
+        <H2 class="gap-x-3">
+          <CodeIcon class="size-7" />
+          Projects
+        </H2>
+        <Projects />
       </SectionContainer>
       <SectionContainer id="about-me">
         <H2

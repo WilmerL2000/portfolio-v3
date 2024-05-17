@@ -25,7 +25,7 @@ export async function getStaticPaths(){
     }))
 }
 ---
-<Layout title={project.title} description={project.summary}>
+<Layout title={project.title} description={project.summary} image={project.projectImage}>
     <SectionContainer class="pt-10">
         <header>
             <h3 class="md:text-5xl text-3xl font-bold block mb-6" transition:name={`project ${project._id} title`}>{project.title}</h3>

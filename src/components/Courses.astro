@@ -1,0 +1,44 @@
+---
+import EducationItem from "./EducationItem.astro"
+
+const COURSES = [
+    {
+        date: "Mar 2024",
+        title: "Python Essentials 2",
+        place: "Cisco Networking Academy",
+        description: "Includes intermediate aspects of Python programming, including modules, packages, exceptions, file processing, as well as general coding and object-oriented programming techniques.",
+        link: "https://www.credly.com/badges/c0449dc1-254b-48b7-9fa3-7b848dc71e49/linked_in_profile"
+    },
+    {
+        date: "Feb 2024",
+        title: "JavaScript Essentials 2",
+        place: "Cisco Networking Academy",
+        description: "It focuses on object-oriented programming, regular expressions, complex data structures such as Map and Set, and asynchronous programming. Also problem solving through algorithms and OOP.",
+        link: "https://www.credly.com/badges/56e89d37-876f-4c6e-a6d6-ac104f70ebc3/linked_in_profile"
+    },
+    {
+        date: "Oct 2023",
+        title: "Intensive English",
+        place: "Tecnológico de Costa Rica (TEC)",
+        description: "The course lasts approximately 384 hours, divided into four levels. The Oxford English Hub platform from Oxford University Press is used to read the educational books and practices online."
+    },
+    {
+        date: "Sep 2023",
+        title: "Oracle Next Education F2 T5 Front-end",
+        place: "Oracle + Alura Latam",
+        link: "https://app.aluracursos.com/user/wilmerlopezcespedes/fullCertificate/27fa51bd788c1ba817ebe355f8f215e3",
+        description: "Course aimed at the Front End with an intensive emphasis that covered approximately 330 hours of specialized content. During this course, I have consolidated my knowledge in technologies such as JavaScript, CSS, HTML, UI libraries, React, as well as agile methodologies and good programming practices."
+    },
+
+]
+---
+
+<ol class="relative mt-16">
+    {
+      COURSES.map((educ) => (
+        <li class="">
+          <EducationItem {...educ} />
+        </li>
+      ))
+    }
+  </ol>
