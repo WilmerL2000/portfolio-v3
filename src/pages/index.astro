@@ -5,10 +5,13 @@ import SectionContainer from '../components/SectionContainer.astro';
 import Experience from '../components/Experience.astro';
 import Projects from '../components/Projects.astro';
 import AboutMe from '../components/AboutMe.astro';
+import H2 from '../components/H2.astro';
+import Hero from '../components/Hero.astro';
 
 import Briefcase from '../components/icons/Briefcase.astro';
 import ProfileCheck from '../components/icons/ProfileCheck.astro';
 import CodeIcon from "../components/icons/Code.astro"
+import Book from '@/components/icons/Book.astro';
 ---
 
 <Layout title="Wilmer Lopez portfolio - Software Developer" description="">
@@ -16,33 +19,38 @@ import CodeIcon from "../components/icons/Code.astro"
 	<main class="px-4">
 		<SectionContainer class="py-16 md:py-36">
 			<slot/>
+      <Hero/>
 		</SectionContainer>
     <div class="space-y-24">
       <SectionContainer id="projects">
-        <h2
-          class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
-        >
+        <H2 class="gap-x-3">
           <CodeIcon class="size-7" />
           Projects
-        </h2>
+        </H2>
         <Projects />
       </SectionContainer>
       <SectionContainer id="experience">
-        <h2
-          class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+        <H2 class="gap-x-3"
         >
           <Briefcase class="size-8" />
           Experience
-        </h2>
+        </H2>
         <Experience />
       </SectionContainer>
+      <SectionContainer id="experience">
+        <H2 class="gap-x-3"
+        >
+          <Book class="size-8" />
+          Education
+        </H2>
+      </SectionContainer>
       <SectionContainer id="about-me">
-        <h2
-          class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
+        <H2
+          class="gap-x-8"
         >
           <ProfileCheck class="size-8" />
           About me
-        </h2>
+        </H2>
         <AboutMe />
       </SectionContainer>
     </div>
