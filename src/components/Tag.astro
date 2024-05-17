@@ -13,7 +13,7 @@ const {technologies} = Astro.props
                 technologies.map(technology => (
                     <li>                    
                         <span class="flex text-gray-100 bg-blue-900 gap-x-2 font-medium me-2 px-2.5 py-0.5 rounded-full w-auto items-center">
-                            <img title={`${technology.title}`} src={technology.url } class="size-5" loading="lazy"/>
+                            <img alt={`${technology.title}`} src={technology.url } class="size-5" loading="lazy"/>
                             {technology.title}
                         </span>
                     </li>
