@@ -28,7 +28,7 @@ export async function getStaticPaths(){
 <Layout title={project.title} description={project.summary} image={project.projectImage}>
     <SectionContainer class="pt-10">
         <header>
-            <h3 class="md:text-5xl text-3xl font-bold block mb-6" transition:name={`project ${project._id} title`}>{project.title}</h3>
+            <h3 class="md:text-5xl text-3xl font-bold block" transition:name={`project ${project._id} title`}>{project.title}</h3>
             <picture class="size-80 mx-auto container">
                 <img src={project.projectImage} alt={project.title} class="aspect-video rounded-xl" transition:name={`project ${project._id} image`}  />
             </picture>
